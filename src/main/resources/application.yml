@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: kafka-stream-example
+  cloud:
+    stream:
+      function:
+        definition: sampleKakfaConsumerChannel
+      bindings:
+        sampleKakfaConsumerChannel-in-0:
+          group: group-1 #group name
+          destination: quickstart #topic name
+      kafka:
+        binder:
+          brokers: localhost:9092
+          autoCreateTopics: false
+          autoAddPartitions: false
+          consumerProperties:
+            max.poll.record: 100
+            max.poll.interval.ms: 480000
+        bindings:
+          sampleKakfaConsumerChannel-in-0:
+            consumer:
+              startOffset: latest
