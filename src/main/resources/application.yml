@@ -4,14 +4,14 @@ spring:
   cloud:
     stream:
       function:
-        definition: sampleKakfaConsumerChannel
+        definition: sampleKakfaConsumerChannel #Bean in consumer class
       bindings:
         sampleKakfaConsumerChannel-in-0:
           group: group-1 #group name
           destination: quickstart #topic name
       kafka:
         binder:
-          brokers: localhost:9092
+          brokers: localhost:9092 #kafka-broker url
           autoCreateTopics: false
           autoAddPartitions: false
           consumerProperties:
