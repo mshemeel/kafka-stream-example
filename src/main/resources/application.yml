@@ -9,6 +9,8 @@ spring:
         sampleKakfaConsumerChannel-in-0:
           group: group-1 #group name
           destination: quickstart #topic name
+        sampleKafkaProducerChannel-out-0:
+          destination : out-topic
       kafka:
         binder:
           brokers: localhost:9092 #kafka-broker url
