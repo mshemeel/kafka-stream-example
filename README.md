@@ -18,4 +18,8 @@ Kafka consumer
 
    When you’ve finished, press Ctrl-D to return to your command prompt.
    refer : https://developer.confluent.io/quickstart/kafka-docker/
-   
+
+8. For kafka producer
+* kafka-topics --bootstrap-server kafka:9092 \--create \--topic out-topic
+- view messages in topic
+* kafka-console-consumer --bootstrap-server kafka:9092 --topic test --from-beginning

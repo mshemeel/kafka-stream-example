@@ -4,7 +4,7 @@ spring:
   cloud:
     stream:
       function:
-        definition: sampleKakfaConsumerChannel #Bean in consumer class
+        definition: sampleKakfaConsumerChannel;sampleKafkaProducerChannel #Bean
       bindings:
         sampleKakfaConsumerChannel-in-0:
           group: group-1 #group name
