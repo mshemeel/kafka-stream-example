@@ -23,3 +23,6 @@ Kafka consumer
 * kafka-topics --bootstrap-server kafka:9092 \--create \--topic out-topic
 - view messages in topic
 * kafka-console-consumer --bootstrap-server kafka:9092 --topic test --from-beginning
+
+9. to list all the topics in kafka
+- kafka-topics --list --bootstrap-server kafka:9092
